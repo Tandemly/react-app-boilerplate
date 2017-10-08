@@ -5,7 +5,6 @@ import css from "./styles.module.scss";
 import { Toggle } from "../../util/component-utils";
 import NavbarMenuToggle from "./NavbarMenuToggle";
 
-console.log("styles:", css);
 const { Component } = React;
 const noop = () => void 0;
 

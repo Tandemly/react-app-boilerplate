@@ -15,13 +15,13 @@ const App = () => (
         </a>
       )}
       renderLeftMenu={() => [
-        <a href="#" className="navbar-item">
+        <a href="#" key="one" className="navbar-item">
           One
         </a>,
-        <a href="#" className="navbar-item">
+        <a href="#" key="two" className="navbar-item">
           Two
         </a>,
-        <a href="#" className="navbar-item is-active">
+        <a href="#" key="three" className="navbar-item is-active">
           Three
         </a>
       ]}

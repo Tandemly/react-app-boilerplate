@@ -27,5 +27,8 @@
     "styleguide": "styleguidist server",
     "styleguide:build": "styleguidist build",
     "release": "standard-version"
+  },
+  "devDependencies": {
+    "eslint-plugin-react": "^7.4.0"
   }
 }

@@ -1,29 +1,36 @@
 // @flow
-import React, { Component } from "react";
-import Navbar from "../../components/Navbar";
+import React from "react";
+import {
+  NavBar,
+  NavBrand,
+  NavItem,
+  NavLink,
+  NavDropDown,
+  NavDivider
+} from "../../components/NavBar";
 import logo from "../../images/tandemly-full-logo-black-white.svg";
 import Button from "../../components/Button";
 import "./App.scss";
 
 const App = () => (
   <div className="App">
-    <Navbar
+    <NavBar
       transparent
-      renderLogo={() => (
-        <a className="navbar-item" href="#">
+      renderBrand={() => (
+        <NavBrand url="http://tandem.ly">
           <img src={logo} alt="Tandem.ly Logo" width="112" height="28" />
-        </a>
+        </NavBrand>
       )}
-      renderLeftMenu={() => [
-        <a href="#" className="navbar-item">
-          One
-        </a>,
-        <a href="#" className="navbar-item">
-          Two
-        </a>,
-        <a href="#" className="navbar-item is-active">
-          Three
-        </a>
+      renderLeft={() => [
+        <NavItem>One</NavItem>,
+        <NavItem tag="a">Two</NavItem>,
+        <NavDropDown text="Drop Down">
+          <NavLink>One</NavLink>
+          <NavLink>Two</NavLink>
+          <NavDivider />
+          <NavLink>Three</NavLink>
+          <NavLink>Four</NavLink>
+        </NavDropDown>
       ]}
     />
     <div className="App-header">

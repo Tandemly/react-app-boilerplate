@@ -1,76 +1,58 @@
 // @flow
 import * as React from "react";
 import cx from "classnames";
-import css from "./styles.module.scss";
-import { Toggle } from "../../util/component-utils";
-import NavbarMenuToggle from "./NavbarMenuToggle";
 
-console.log("styles:", css);
-const { Component } = React;
-const noop = () => void 0;
+import Toggle from "../../containers/Toggle";
+import OutsideClick from "../../containers/OutsideClick";
 
-type PropTypes = {
-  /** turn on transparency for the navbar so page background comes through */
-  transparent?: boolean,
-  /** optional classnames to append to the main container <nav> element */
-  classNames?: string,
-  /** optional list of components for left-side of navbar */
-  renderLeftMenu?: () => React.Node,
-  /** optional list of components for left-side of navbar */
-  renderRightMenu?: () => React.Node,
-  /** logo component/element to render on left-side of navbar */
-  renderLogo?: () => React.Node
+type Props = {
+  className?: string,
+  renderBrand?: () => React.Node,
+  renderLeft?: () => React.Node,
+  renderRight?: () => React.Node,
+  props?: { [key: string]: any }
 };
 
-/**
- * Global navigation bar for all pages
- * 
- * @class Navbar
- * @extends {Component}
- */
-const Navbar = ({
-  transparent,
-  classNames,
-  renderLeftMenu = noop,
-  renderRightMenu = noop,
-  renderLogo = noop
-}: PropTypes) => {
-  const styles = {};
-  const classes = {
-    main: cx(css.navbar, "navbar", "is-transparent", classNames),
-    burger: "button navbar-burger",
-    menu: cx("navbar-menu")
-  };
-
-  if (transparent) {
-    styles.nav = { ...styles.nav, background: "transparent" };
-    styles.burger = {
-      ...styles.burger,
-      background: "transparent",
-      borderColor: "transparent"
-    };
-  }
-
+const NavBar = ({
+  className,
+  renderBrand,
+  renderLeft,
+  renderRight,
+  ...props
+}: Props) => {
+  const classes = cx("navbar", className);
+  const collapsible = props.collapsible || true;
   return (
-    <Toggle initialToggle={false}>
+    <Toggle>
       {({ toggled, onToggle }) => (
-        <nav
-          className={classes.main}
-          aria-label="main navigation"
-          style={styles.nav}
-        >
-          <div className="navbar-brand">
-            {renderLogo()}
-            <NavbarMenuToggle toggled={toggled} onToggle={onToggle} />
+        <OutsideClick onOutsideClick={() => toggled && onToggle()}>
+          <div className={classes} {...props}>
+            <div className="navbar-brand">
+              {renderBrand && renderBrand()}
+
+              {collapsible && (
+                <div
+                  className={cx("navbar-burger burger", {
+                    "is-active": toggled
+                  })}
+                  onClick={onToggle}
+                >
+                  <span />
+                  <span />
+                  <span />
+                </div>
+              )}
+            </div>
+
+            <div className={cx("navbar-menu", { "is-active": toggled })}>
+              {renderLeft && <div className="navbar-start">{renderLeft()}</div>}
+              {renderRight && <div className="navbar-end">{renderRight()}</div>}
+            </div>
           </div>
-          <div className={cx(classes.menu, { "is-active": toggled })}>
-            <div className="navbar-start">{renderLeftMenu()}</div>
-            <div className="navbar-end">{renderRightMenu()}</div>
-          </div>
-        </nav>
+        </OutsideClick>
       )}
     </Toggle>
   );
 };
 
-export default Navbar;
+export default NavBar;

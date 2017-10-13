@@ -12,15 +12,15 @@ type Props = {
   /** classnames to add to the rendered component */
   className?: string,
   /** style object from react-styleable */
-  css?: { [key: string]: any }
+  css: { button?: string, [key: string]: any }
 };
 
 /**
  * A basic button component.
  */
-const Button = ({ children, text, className, css }: Props) => (
+const Button = ({ children, text, className, css = {} }: Props) => (
   <button className={cx("button", css.button, className)}>
-    { (text || children) && <span>{text || children}</span> }
+    {(text || children) && <span>{text || children}</span>}
   </button>
 );
 

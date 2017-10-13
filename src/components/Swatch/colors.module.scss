@@ -1,5 +1,7 @@
 @import "../../styles/custom_variables.scss";
 
+$colors: map-merge($colors, $additional-colors);
+
 .swatch_wrapper {
   position: relative;
   border-radius: 2px;
@@ -27,13 +29,6 @@
     opacity: 0.5;
     white-space: nowrap;
   }
-  // border-radius: 2px;
-  // box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-  // // display: inline-block;
-  // // float: left;
-  // height: 24px;
-  // margin-right: 8px;
-  // width: 24px;
 }
 
 // share css variables with javascript. ftw!

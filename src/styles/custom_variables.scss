@@ -8,9 +8,36 @@ $secondary-inverse: findColorInvert($secondary);
 $accent: #ae3379;
 $accent-inverse: findColorInvert($accent);
 
+// $additional-colors: (
+//   "secondary": ($secondary, $secondary-inverse),
+//   "accent": ($accent, $accent-inverse)
+// );
+$orange: #d75f4c;
+$green: #bedf5d;
+$red: #ba303e;
+
+$grey-text: #bbbbbb;
+$grey-dark: #3a4249;
+$grey-mid: #575f68;
+$grey-light: #69727c;
+$grey-main: #434b54;
+
+$grey-100: #3a4249;
+$grey-100-inverse: findColorInvert($grey-100);
+$grey-80: #434b54;
+$grey-80-inverse: findColorInvert($grey-80);
+$grey-60: #575f68;
+$grey-60-inverse: findColorInvert($grey-60);
+$grey-40: #69727c;
+$grey-40-inverse: findColorInvert($grey-40);
+
 $additional-colors: (
   "secondary": ($secondary, $secondary-inverse),
-  "accent": ($accent, $accent-inverse)
+  "accent": ($accent, $accent-inverse),
+  "grey-100": ($grey-100, $grey-100-inverse),
+  "grey-80": ($grey-80, $grey-80-inverse),
+  "grey-60": ($grey-60, $grey-60-inverse),
+  "grey-40": ($grey-40, $grey-40-inverse)
 );
 
 $family-primary: "Fira Sans";

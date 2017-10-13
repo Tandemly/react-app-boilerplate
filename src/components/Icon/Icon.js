@@ -5,7 +5,7 @@ import cx from "classnames";
 
 // import css from "./styles.module.scss";
 
-const sizes = {
+const sizes: { [key: string]: string } = {
   small: "is-small",
   medium: "is-medium",
   large: "is-large"
@@ -21,7 +21,7 @@ const Icon = ({
   size?: string
 }) => {
   return (
-    <span className={cx("icon", { size: sizes[size] }, className)}>
+    <span className={cx("icon", { size: size && sizes[size] }, className)}>
       <i className={icon} />
     </span>
   );

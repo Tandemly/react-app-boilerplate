@@ -1,0 +1,323 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <App />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <NavBar
+          renderBrand={[Function]}
+          renderLeft={[Function]}
+          transparent={true}
+/>,
+        <div
+          className="App-header"
+>
+          <img
+                    alt="logo"
+                    className="App-logo"
+                    src="tandemly-full-logo-black-white.svg"
+          />
+          <h2>
+                    Welcome to React
+          </h2>
+</div>,
+        <p
+          className="App-intro"
+>
+          To get started, edit 
+          <code>
+                    src/App.js
+          </code>
+           and save to reload.
+</p>,
+        <Styleable(Button)
+          className="is-primary"
+          css={Object {}}
+          text="Click Me"
+/>,
+      ],
+      "className": "App",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "function",
+        "props": Object {
+          "renderBrand": [Function],
+          "renderLeft": [Function],
+          "transparent": true,
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="logo"
+              className="App-logo"
+              src="tandemly-full-logo-black-white.svg"
+/>,
+            <h2>
+              Welcome to React
+</h2>,
+          ],
+          "className": "App-header",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "logo",
+              "className": "App-logo",
+              "src": "tandemly-full-logo-black-white.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Welcome to React",
+            },
+            "ref": null,
+            "rendered": "Welcome to React",
+            "type": "h2",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "To get started, edit ",
+            <code>
+              src/App.js
+</code>,
+            " and save to reload.",
+          ],
+          "className": "App-intro",
+        },
+        "ref": null,
+        "rendered": Array [
+          "To get started, edit ",
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "src/App.js",
+            },
+            "ref": null,
+            "rendered": "src/App.js",
+            "type": "code",
+          },
+          " and save to reload.",
+        ],
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "class",
+        "props": Object {
+          "className": "is-primary",
+          "css": Object {},
+          "text": "Click Me",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <NavBar
+            renderBrand={[Function]}
+            renderLeft={[Function]}
+            transparent={true}
+/>,
+          <div
+            className="App-header"
+>
+            <img
+                        alt="logo"
+                        className="App-logo"
+                        src="tandemly-full-logo-black-white.svg"
+            />
+            <h2>
+                        Welcome to React
+            </h2>
+</div>,
+          <p
+            className="App-intro"
+>
+            To get started, edit 
+            <code>
+                        src/App.js
+            </code>
+             and save to reload.
+</p>,
+          <Styleable(Button)
+            className="is-primary"
+            css={Object {}}
+            text="Click Me"
+/>,
+        ],
+        "className": "App",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "function",
+          "props": Object {
+            "renderBrand": [Function],
+            "renderLeft": [Function],
+            "transparent": true,
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="logo"
+                className="App-logo"
+                src="tandemly-full-logo-black-white.svg"
+/>,
+              <h2>
+                Welcome to React
+</h2>,
+            ],
+            "className": "App-header",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "logo",
+                "className": "App-logo",
+                "src": "tandemly-full-logo-black-white.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Welcome to React",
+              },
+              "ref": null,
+              "rendered": "Welcome to React",
+              "type": "h2",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "To get started, edit ",
+              <code>
+                src/App.js
+</code>,
+              " and save to reload.",
+            ],
+            "className": "App-intro",
+          },
+          "ref": null,
+          "rendered": Array [
+            "To get started, edit ",
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "src/App.js",
+              },
+              "ref": null,
+              "rendered": "src/App.js",
+              "type": "code",
+            },
+            " and save to reload.",
+          ],
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "class",
+          "props": Object {
+            "className": "is-primary",
+            "css": Object {},
+            "text": "Click Me",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

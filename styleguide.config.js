@@ -1,5 +1,5 @@
 const path = require("path");
-const webpackConfig = require("custom-react-scripts/config/webpack.config.dev.js");
+const webpackConfig = require("@tandem.ly/react-scripts/config/webpack.config.dev.js");
 
 module.exports = {
   components: "src/components/**/[A-Z]*.js",
@@ -13,7 +13,7 @@ module.exports = {
   ],
   require: [
     // The Application's specific styles
-    path.join(__dirname, "src/styles/index.css"),
+    path.join(__dirname, "src/styles/index.scss"),
     // Styles solely for react-styleguide
     path.join(__dirname, "src/styleguide/styles/styles.css")
   ],

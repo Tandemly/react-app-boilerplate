@@ -14,6 +14,7 @@ const hslToString = hsl => {
 const ucfirst = s => s.charAt(0).toUpperCase() + s.slice(1);
 
 const Swatch = ({ color }: { color: string }) => {
+  console.log(">> styles", styles);
   const _color = Color(styles[`color_${color}`]);
   const hsl = _color.hsl();
   console.log(hsl);

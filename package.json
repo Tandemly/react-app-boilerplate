@@ -9,6 +9,7 @@
     "color": "^2.0.0",
     "empty": "^0.10.1",
     "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.1",
     "flow-bin": "^0.56.0",
     "jest-enzyme": "^4.0.0",
     "npm-run-all": "^4.1.1",
@@ -29,6 +30,7 @@
     "release": "standard-version"
   },
   "devDependencies": {
-    "eslint-plugin-react": "^7.4.0"
+    "eslint-plugin-react": "^7.4.0",
+    "react-test-renderer": "^16.0.0"
   }
 }
